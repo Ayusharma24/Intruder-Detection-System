@@ -1,0 +1,15 @@
+# Ignore face images (users should create these manually)
+known_faces/
+intruders/
+
+# Ignore virtual environment
+venv/
+*.pyc
+__pycache__/
+
+# Ignore .env file
+.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
