@@ -1,129 +1,109 @@
-Intruder Detection System 🚀
+# Intruder Detection System 🚀
 
-Welcome to the Intruder Detection System, a real-time face recognition application built with OpenCV, Face Recognition, and Streamlit. This application helps in identifying known individuals and detecting intruders, sending alerts via email when an unknown person is detected.
+Welcome to the **Intruder Detection System**, a real-time face recognition application built with OpenCV, Face Recognition, and Streamlit. This application helps in identifying known individuals and detecting intruders, sending alerts via email when an unknown person is detected.
 
-📌 Features
+## 📌 Features
 
-Real-time Face Recognition using OpenCV
+- **Real-time Face Recognition** using OpenCV
+- **Automatic Intruder Detection** and alert system
+- **Email Verification** before sending alerts
+- **Customizable Face Database** for known individuals
+- **Secure Email Alerting** with image attachments
 
-Automatic Intruder Detection and alert system
+## 🛠️ Installation
 
-Email Verification before sending alerts
+### 1️⃣ Prerequisites
+Ensure you have **Python 3.8+** installed.
 
-Customizable Face Database for known individuals
-
-Secure Email Alerting with image attachments
-
-🛠️ Installation
-
-1️⃣ Prerequisites
-
-Ensure you have Python 3.8+ installed.
-
-2️⃣ Clone the Repository
-
+### 2️⃣ Clone the Repository
+```bash
 git clone https://github.com/Ayusharma24/Intruder-Detection-System.git
 cd intruder-detection
+```
 
-3️⃣ Install Dependencies
-
+### 3️⃣ Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
-📂 Setting Up Directories
+## 📂 Setting Up Directories
 
 The application requires two key directories, which need to be created manually by the user:
 
-🔹 known_faces/ (For Known Individuals)
-
+### 🔹 `known_faces/` (For Known Individuals)
 This directory should contain images of authorized individuals. The filenames (without extensions) will be used as labels.
 
-📌 Steps to Set Up:
-
-Manually create the directory inside the project:
-
+#### 📌 Steps to Set Up:
+```bash
 mkdir known_faces
+```
+- Add face images of known people in **.jpg, .png, or .jpeg** format.
+- Ensure each file is named as the person's full name (e.g., `John_Doe.jpg`).
 
-Add face images of known people in .jpg, .png, or .jpeg format.
-
-Ensure each file is named as the person's full name (e.g., John_Doe.jpg).
-
-🔹 intruders/ (For Detected Intruders)
-
+### 🔹 `intruders/` (For Detected Intruders)
 This directory will store images of unknown individuals detected by the system.
 
-📌 Steps to Set Up:
-
-Manually create the directory inside the project:
-
+#### 📌 Steps to Set Up:
+```bash
 mkdir intruders
+```
+- No need to add files; the system will automatically save intruder images here.
 
-No need to add files; the system will automatically save intruder images here.
-
-🚀 Running the Application
-
+## 🚀 Running the Application
 After setting up everything, start the application with:
-
+```bash
 streamlit run app.py
-
+```
 This will open the application in your web browser.
 
-📧 Email Alert Configuration
-
-Set up email alerts by providing your SMTP credentials as environment variables:
-
+## 📧 Email Alert Configuration
+Set up email alerts by providing your **SMTP credentials** as environment variables:
+```bash
 export SMTP_EMAIL_ADDRESS="your-email@example.com"
 export SMTP_EMAIL_PASSWORD="your-password"
 export SMTP_SERVER="smtp.example.com"
 export SMTP_PORT="587"
-
+```
 Ensure that your SMTP provider allows third-party access.
 
-🛠️ User Interaction Guide
+## 🛠️ User Interaction Guide
 
-Face Database Setup: Add authorized individuals' images in known_faces/.
+1. **Face Database Setup**: Add authorized individuals' images in `known_faces/`.
+2. **Starting the System**: Run `streamlit run app.py` and follow the interface.
+3. **Email Verification**: Users must verify their email before receiving alerts.
+4. **Intruder Detection**: When an unknown face is detected, it is saved in `intruders/`, and an email is sent.
 
-Starting the System: Run streamlit run app.py and follow the interface.
-
-Email Verification: Users must verify their email before receiving alerts.
-
-Intruder Detection: When an unknown face is detected, it is saved in intruders/, and an email is sent.
-
-🛠️ Missing Components (To Be Created by the User)
+## 🛠️ Missing Components (To Be Created by the User)
 
 Certain files and configurations need to be set up by the user:
-
-known_faces/ and intruders/ directories: Must be created manually.
-
-Email credentials: Users must configure their own SMTP settings.
-
-Face Database: Users must upload images of known individuals.
+- **`known_faces/` and `intruders/` directories**: Must be created manually.
+- **Email credentials**: Users must configure their own SMTP settings.
+- **Face Database**: Users must upload images of known individuals.
 
 These steps ensure that the system operates correctly without exposing sensitive data.
 
-🛠️ Troubleshooting
+## 🛠️ Troubleshooting
 
-Camera not working? Check if another application is using it.
+- **Camera not working?** Check if another application is using it.
+- **Emails not sending?** Verify SMTP credentials and server configuration.
+- **Faces not recognized?** Ensure `known_faces/` has clear images of individuals.
 
-Emails not sending? Verify SMTP credentials and server configuration.
-
-Faces not recognized? Ensure known_faces/ has clear images of individuals.
-
-🤝 Contributing
+## 🤝 Contributing
 
 We welcome contributions! Fork the repository, enhance features, fix bugs, and submit a pull request to make this project even better. 🚀
 
-📜 License
+## 📜 License
 
-This project is open-source and available under the GNU General Public License v3.0.
+This project is open-source and available under the **GNU General Public License v3.0**. See the [LICENSE](LICENSE) file for details.
 
-📬 Contact
+## 📬 Contact
 
 For any queries, reach out via:
 
-📧 Email: alpha992k80@gmail.com
-🐙 GitHub Issues: Open an Issue
+📧 **Email**: alpha992k80@gmail.com  
+🐙 **GitHub Issues**: [Open an Issue](https://github.com/Ayusharma24/Intruder-Detection-System/issues)
 
+## 
 💡 Let's build AI-powered security solutions together! 🚀
 
-Happy Coding! 🎉
-
+**Happy Coding! 🎉**
